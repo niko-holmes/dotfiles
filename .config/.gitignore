@@ -12,3 +12,6 @@
 
 !nvim
 !nvim/**
+
+!terminator
+!terminator/**
