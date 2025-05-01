@@ -13,10 +13,5 @@
 !nvim
 !nvim/**
 
-<<<<<<< Updated upstream
 !terminator
 !terminator/**
-=======
-!linters
-!linters/**
->>>>>>> Stashed changes
