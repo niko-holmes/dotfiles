@@ -21,7 +21,7 @@ palette = 'jammy'
 [palettes.jammy]
 red = '#8b1331'
 orange = '#be5018'
-yellow = '#ac7a1a' 
+yellow = '#ac7a1a'
 green = '#537d4b'
 cyan = '#46878a'
 blue = '#472c9f'
@@ -42,7 +42,7 @@ show_always = true
 [hostname]
 format = "[@$hostname$ssh_symbol]($style)"
 style = "magenta"
-ssh_symbol = '🌐'
+ssh_symbol = ''
 
 [directory]
 format = "|[$path]($style)"
@@ -55,19 +55,16 @@ error_symbol = "[>](red)"
 vimcmd_symbol = "[<](bold green)"
 
 [git_branch]
-format = "|[$branch]($style)"
-style = "yellow"
+format = "|[$symbol $branch]($style)"
+style = "bold yellow"
+symbol = '󰘬'
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)"
+format = """
+[[($up_to_date$modified$conflicted$untracked$renamed$deleted)](magenta)($staged$ahead_behind$stashed)]($style)"""
 style = "green"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
+modified = '*'
+stashed = '≡'
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\)'
@@ -79,15 +76,16 @@ style = "orange"
 
 [conda]
 format = "|[$symbol $environment]($style)"
-symbol = "conda"
+symbol = ""
 style = "orange"
 
 [python]
 format = "|[$symbol $version]($style) [$virtualenv](orange)"
-symbol = "py"
+symbol = ""
 style = "bold green"
 
 [c] # With C++
-format = "|[$name $version]($style)"
+format = "|[$symbol $name $version]($style)"
+symbol = ""
 style = "bold green"
 detect_extensions = ['c', 'cpp', 'h', 'hpp']
