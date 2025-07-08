@@ -1,7 +1,6 @@
 [global_config]
   window_state = maximise
   borderless = True
-  hide_from_taskbar = True
   suppress_multiple_term_dialog = True
 [keybindings]
 [profiles]
